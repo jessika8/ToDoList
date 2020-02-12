@@ -29,17 +29,22 @@ export default class App extends Component {
 
   addToDo = () => {
     console.log("Add Button is working")
+    if (this.state.userInput === "") {
+      alert("Please enter a TASK")
+    } else {
     this.setState({
-      tasks: [...this.state.tasks, this.state.userInput]
-    })
-  }
-  
-  clear = () => {
-    console.log("Clear button is working")
-    this.setState({
+      tasks: [...this.state.tasks, this.state.userInput],
       userInput: ""
     })
   }
+  }
+
+  // clear = () => {
+  //   console.log("Clear button is working")
+  //   this.setState({
+  //     userInput: ""
+  //   })
+  // }
 
 
 
@@ -48,7 +53,7 @@ export default class App extends Component {
 
     const allTasks = this.state.tasks.map((task, index) => {
       // return <h1>{task}</h1>
-      return <li key={index}>
+      return <li value={index}>
                   {task}
                   <button className="listButton" onClick={() => this.removeToDo(index)}>x</button>
                </li>
@@ -66,7 +71,7 @@ export default class App extends Component {
 
         <div className="twoButtons">
         <button className="buttonAdd" onClick={this.addToDo} >Add Task</button>
-        <button className="buttonClear" onClick={this.clear}>Clear</button>
+        {/* <button className="buttonClear" onClick={this.clear}>Clear</button> */}
         </div>
 
         <div className="displayTask">
