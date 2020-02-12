@@ -5,7 +5,7 @@ import './App.css';
 export default class App extends Component {
   state = {
     userInput: "",
-    tasks: []
+    tasks: [],
 
   }
   onChangeHandler = (event) => {
@@ -33,6 +33,7 @@ export default class App extends Component {
       tasks: [...this.state.tasks, this.state.userInput]
     })
   }
+  
   clear = () => {
     console.log("Clear button is working")
     this.setState({
@@ -56,6 +57,11 @@ export default class App extends Component {
     return (
 
       <div className="wholeBody" >
+      <div className="date">
+      <h1>{(new Date().getDate())}.</h1>
+      <h1>{(new Date().getMonth() + 1)}.</h1>
+      <h1>{(new Date().getFullYear())}</h1>
+      </div>
         <input className="input" type="text" name="searchbar" placeholder="ToDo" value={this.state.userInput} onChange={this.onChangeHandler} />
 
         <div className="twoButtons">
