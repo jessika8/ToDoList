@@ -1,38 +1,62 @@
-.App {
+body {
   text-align: center;
+  margin-top: 10vh
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wholeBody {
+  padding-top: 4vh;
   display: flex;
   flex-direction: column;
+ align-content: center;
+  background-color: rgb(182, 219, 250);
+  height: 70vh;
+  width: 40vw;
+  display: inline-block;
+  border-style: solid;
+  border-color: rgb(120, 153, 190)
+ 
+
+}
+li {
+  background-color: rgb(231, 232, 241);
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 35vw;
+  margin-left: 2.5vh;
+  border-style: solid;
+  border-color: rgb(182, 219, 250);
+  height: 5vh;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  margin-top: 2vh;
+  text-align: center;
+  margin-bottom: 1.5vh;
+  height: 6vh;
+  width: 35VW;
+  font-size: 5vh;
+  border-style: solid;
+  border-color: rgb(120, 153, 190)
+}
+.buttonAdd, .buttonClear {
+  width: 12vw;
+  height: 3.5vh;
+  display: inline-block;
+  font-size: 1.8vh;
+  color: rgb(136, 136, 141);
+  font-weight: bolder;
+  margin-bottom: 2.5vh;
+  background-color: rgb(231, 232, 241);
+  border-style: solid;
+  border-color: rgb(120, 153, 190)
+}
+.twoButtons {
+  text-align: center
+}
+.listButton {
+  height: 5vh;
+  width: 5vw;
+  background-color: rgb(161, 161, 161);
+  font-size: 3vh
 }
