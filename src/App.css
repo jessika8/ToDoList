@@ -13,9 +13,7 @@ body {
   display: inline-block;
   border-style: solid;
   border-color: rgb(120, 153, 190);
-  
-  
- 
+
 
 }
 li {
@@ -72,4 +70,32 @@ li {
 
 h1 {
   color: rgb(80, 80, 82);
+}
+
+@media only screen and (max-width: 450px) {
+
+  .wholeBody {
+    width: 85vw;
+    height: 100vh;
+  }
+
+  .date {
+    margin-bottom: 4vh;
+  }
+  .input {
+    width: 70vw;
+    height: 8vh;
+  }
+  li {
+    width: 70vw;
+    height: 8vh;
+  }
+  .buttonAdd, .buttonClear {
+    width: 40vw;
+    height: 7vh;
+  }
+  .listButton {
+    width: 9vw;
+  }
+
 }
